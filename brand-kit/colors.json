@@ -1,0 +1,29 @@
+{
+  "brand": "Dr. Atlanta Cosmetic Dentistry",
+  "source": "web/app/globals.css :root tokens (2026-10-08)",
+  "palette": {
+    "porcelain":   { "hex": "#F2F1ED", "role": "Primary background. Warm off-white; the page colour and the on-ink text colour." },
+    "porcelain-2": { "hex": "#E9E7E1", "role": "Secondary surface: cards, media frames, the studio cyclorama." },
+    "ink":         { "hex": "#16181B", "role": "Primary dark. Dark sections, the capsule header on hover, buttons, the app icon background." },
+    "ink-2":       { "hex": "#24272B", "role": "Secondary dark surface inside ink sections." },
+    "text":        { "hex": "#1E2023", "role": "Body and headline text on porcelain." },
+    "text-2":      { "hex": "#5C5F64", "role": "Secondary text: ledes, captions, the 'Cosmetic Dentistry' descriptor." },
+    "text-3":      { "hex": "#686B70", "role": "Tertiary text (4.7:1 on porcelain)." },
+    "on-ink":      { "hex": "#F2F1ED", "role": "Text on ink (same value as porcelain)." },
+    "on-ink-2":    { "hex": "#A9ACB1", "role": "Secondary text on ink." },
+    "mark-gold":   { "hex": "#B9975B", "role": "The accent. The period in the wordmark, the dot in the monogram, hairline shine on the CTA, small highlights. Never a fill for large areas." },
+    "gold-text":   { "hex": "#7F6128", "role": "Gold for small type on light backgrounds (5:1 on porcelain). Use instead of mark-gold whenever gold has to be read." },
+    "focus":       { "hex": "#2F5BFF", "role": "Keyboard focus ring only." }
+  },
+  "rules": {
+    "rule":        "rgba(22, 24, 27, 0.14)",
+    "rule-strong": "rgba(22, 24, 27, 0.40)",
+    "on-ink-rule": "rgba(242, 241, 237, 0.16)"
+  },
+  "extended": {
+    "hero-gradient": "Dark cinematic grade over footage: ink at ~0.94 alpha on the copy side fading to ~0.5 across the frame.",
+    "gum-pink (3D model only)": "#F0B4AE sheen on the gum material; not a brand colour.",
+    "payment-slider field": "Soft positive drift of mint → butter → apricot behind the monthly number; decorative only."
+  },
+  "proportions": "Porcelain ~70%, ink ~25%, gold under 2% of any composition. Gold is punctuation, not a colour field."
+}

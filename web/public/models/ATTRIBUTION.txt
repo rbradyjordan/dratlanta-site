@@ -1,0 +1,11 @@
+01  "Human teeth" by Alexander Antipov (Sketchfab: Dessen) — CC-BY-4.0
+    https://sketchfab.com/3d-models/human-teeth-c4c569f0e08948e2a572007a7a5726f2
+    Obtained from a GitHub mirror (Thumblesteen/Spooky-Tunnel-Game, PROJECT/ASSETS/MESH/LEVEL/TEETHS/human_teeth.glb);
+    asset.extras in the GLB carry author/license/source. Converted spec-gloss -> metal/rough, centered, textures -> WebP.
+02  "Mouth, Male" 3D Reference Organ, Human Reference Atlas (HuBMAP) — CC-BY-4.0
+    https://humanatlas.io/3d-reference-library | NIH 3D 3DPX-022831 | CDN: cdn.humanatlas.io/digital-objects/ref-organ/mouth-male/v1.0/assets/3d-vh-m-mouth.glb
+    Pruned to upper/lower teeth sets + upper/lower gingiva, simplified 12%, centered.
+03  "Upper dental tooth model" 3DPX-003002, Michael Scherer DMD, NIH 3D Print Exchange — Public Domain (CC0)
+04  BodyParts3D, (c) The Database Center for Life Science — CC Attribution-Share Alike 2.1 Japan (28 teeth + gingiva, 99% reduced meshes)
+05  "3D model of the human mouth" by Mince — CC-BY-4.0 (Wikimedia Commons / Sketchfab "Human mouth detailed")
+06  "3D partial human mandible with teeth" (CEREC scan, embodi3d user) — CC-BY-4.0 (Wikimedia Commons)

@@ -1,0 +1,15 @@
+# dependencies and build output
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# local env and tooling
+.env*
+.vercel/
+.claude/
+.DS_Store
+
+# the zip is a packaged copy of brand-kit/
+dr-atlanta-brand-kit.zip

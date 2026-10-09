@@ -1,0 +1,28 @@
+.cmp { position: relative; overflow: hidden; border-radius: 4px; width: 100%; user-select: none; touch-action: pan-y; background: var(--ink-2); }
+.layer { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block; }
+.cap {
+  position: absolute; left: 12px; bottom: 10px; z-index: 1;
+  font-size: 0.74rem; letter-spacing: 0.02em; color: #F2F1ED;
+  background: rgba(22,24,27,0.55); padding: 4px 9px; border-radius: 999px;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.capR { left: auto; right: 12px; }
+.handle {
+  position: absolute; top: 0; bottom: 0; width: 1px; background: rgba(242,241,237,0.9);
+  transform: translateX(-0.5px); pointer-events: none; z-index: 2;
+  transition: left 0.08s linear;
+}
+.knob {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 44px; height: 44px; border-radius: 50%; background: #F2F1ED;
+  box-shadow: 0 8px 24px -8px rgba(0,0,0,0.6);
+}
+.knob::before, .knob::after {
+  content: ""; position: absolute; top: 50%; width: 7px; height: 7px; border-top: 1.5px solid #16181B; border-left: 1.5px solid #16181B;
+}
+.knob::before { left: 12px; transform: translateY(-50%) rotate(-45deg); }
+.knob::after { right: 12px; transform: translateY(-50%) rotate(135deg); }
+.range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; z-index: 3; appearance: none; }
+.range::-webkit-slider-thumb { appearance: none; width: 60px; height: 100%; }
+.srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .handle { transition: none; } }

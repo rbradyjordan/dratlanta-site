@@ -1,0 +1,14 @@
+.wrap { display: grid; gap: 14px; }
+.gl {
+  position: relative; width: 100%; height: clamp(300px, 46vw, 560px); border-radius: 6px; overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 50% 10%, rgba(255,255,255,0.5), transparent 60%),
+    linear-gradient(180deg, #E9E6DF, #D9D5CC);
+}
+.fallback { display: grid; place-items: center; height: 100%; color: var(--text-2); font-size: 0.95rem; padding: 24px; text-align: center; }
+.ctl { display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center; }
+.lbl { font-size: 0.9rem; color: var(--text-2); }
+.range { width: 100%; appearance: none; height: 1px; background: var(--rule-strong); outline: none; margin: 14px 0; }
+.range::-webkit-slider-thumb { appearance: none; width: 26px; height: 26px; border-radius: 50%; background: var(--ink); border: 3px solid var(--porcelain); box-shadow: 0 0 0 1px var(--ink); cursor: ew-resize; }
+.range::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--ink); border: 3px solid var(--porcelain); cursor: ew-resize; }
+.note { font-size: 0.9rem; color: var(--text-2); max-width: 52ch; }
