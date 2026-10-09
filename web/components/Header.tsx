@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, LayoutGroup, motion } from 'motion/react';
 import Magnet from '@/components/Magnet';
-import BlurText from '@/components/BlurText';
 import { ShineBorder } from '@/components/ui/shine-border';
 import { NumberTicker } from '@/components/ui/number-ticker';
 
@@ -219,11 +218,11 @@ export default function Header() {
           <nav aria-label="Primary, mobile">
             {items.map((it, i) => (
               <Link key={it.href} href={it.href} aria-current={current(it.href) ? 'page' : undefined}>
-                {open ? <BlurText text={it.label} delay={70 + i * 55} animateBy="words" direction="top" className="menu-blur" /> : it.label}
+                <span className="menu-word" style={{ ['--i' as string]: i }}>{it.label}</span>
               </Link>
             ))}
             <Link href="/consultation/" className="menu-cta">
-              {open ? <BlurText text="Book a consultation" delay={400} animateBy="words" direction="top" className="menu-blur" /> : 'Book a consultation'}
+              <span className="menu-word" style={{ ['--i' as string]: items.length }}>Book a consultation</span>
             </Link>
           </nav>
           <div className="menu-foot">

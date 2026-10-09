@@ -86,3 +86,22 @@
 @media (prefers-reduced-motion: reduce) {
   .blob, .dot, .smile path { transition: none; }
 }
+
+@media (max-width: 640px) {
+  .range { height: 44px; }
+  .range::-webkit-slider-thumb { width: 38px; height: 38px; margin-top: -14px; }
+  .tick { padding: 11px 9px; font-size: 0.84rem; }
+  .tick:first-child { margin-left: -9px; } .tick:last-child { margin-right: -9px; }
+  .dot { transition-delay: 0s; }
+}
+
+/* Narrow card (phones): the card is taller than it is wide, so the color needs bigger, lower blobs to reach
+   the slider and the button instead of stopping at the number. */
+@container (max-width: 520px) {
+  .blob { width: 105cqw; filter: blur(52px); opacity: 0.8; }
+  .b1 { left: -40cqw; top: -30cqw; }
+  .b2 { right: -45cqw; top: 20cqw; }
+  .b3 { left: -30cqw; bottom: -20cqw; }
+  .b4 { width: 95cqw; right: -30cqw; bottom: -45cqw; }
+  .field::after { background: linear-gradient(180deg, rgba(255,253,248,0.1), rgba(255,253,248,0.42)); }
+}

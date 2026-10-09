@@ -9,6 +9,7 @@ import Photo from '@/components/Photo';
 import Ticker from '@/components/Ticker';
 import ProofCards from '@/components/ProofCards';
 import CaseMarquee from '@/components/CaseMarquee';
+import TeethModelClient from '@/components/TeethModelClient';
 import { proof } from '@/lib/content';
 import JsonLd from '@/components/JsonLd';
 import { pageMeta } from '@/lib/site';
@@ -116,6 +117,23 @@ export default function Home() {
         </div>
 
         <CaseMarquee />
+      </section>
+
+      {/* The change itself, on a model you can turn */}
+      <section id="model" className="band model-band anchor">
+        <div className="wrap">
+          <div className="grid" style={{ marginBottom: 'clamp(24px, 4vw, 40px)' }}>
+            <div className="c-1-6"><h2>See what porcelain changes.</h2></div>
+            <div className="c-7-13" style={{ alignSelf: 'end' }}>
+              <p className="lede">
+                Drag from before to after. Stains, a chip, a gap, and a tooth out of line on the teeth that show when you
+                smile, then the same teeth in porcelain.
+              </p>
+            </div>
+          </div>
+          <TeethModelClient />
+          <p style={{ marginTop: 28 }}><Link className="link" href="/veneers/">How porcelain veneers work</Link></p>
+        </div>
       </section>
 
       {/* Captive scroll: the process, pinned */}

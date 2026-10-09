@@ -30,7 +30,7 @@
 }
 .tab.on { transform: translateY(-8px) scale(1.05); }
 .tab:focus-visible { outline: 2px solid #2F5BFF; outline-offset: 4px; }
-.tabId { position: absolute; left: 50%; bottom: -1.6rem; transform: translateX(-50%); font-size: 0.72rem; color: rgba(22,24,27,0.6); white-space: nowrap; }
+.tabId { position: absolute; left: 50%; bottom: -1.6rem; transform: translateX(-50%); font-size: 0.75rem; color: rgba(22,24,27,0.6); white-space: nowrap; }
 
 /* Controls column */
 .controls { display: grid; gap: clamp(18px, 2.2vw, 26px); align-content: start; }
@@ -42,14 +42,14 @@
 .stepN { font-family: var(--display); font-size: 0.9rem; color: var(--gold-text); padding-top: 0.25rem; }
 .stepBody { min-width: 0; }
 .hintText { display: block; font-size: 0.8rem; color: var(--text-3); margin-top: 2px; font-weight: 400; }
-.scale { display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-3); }
+.scale { display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-3); }
 
 .shades { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
 .shadeBtn { display: grid; gap: 6px; justify-items: center; padding: 6px 4px; border-radius: 8px; border: 1px solid transparent; transition: border-color 0.3s, background 0.3s; }
 .shadeBtn:hover { background: rgba(22,24,27,0.04); }
 .shadeBtn.on { border-color: var(--text); background: #fff; }
 .shadeSwatch { width: 100%; aspect-ratio: 3 / 4; border-radius: 30% 30% 40% 40% / 12% 12% 45% 45%; box-shadow: inset 0 -6px 10px -8px rgba(0,0,0,0.35), inset 0 1px 1px rgba(255,255,255,0.8), 0 1px 0 rgba(0,0,0,0.06); }
-.shadeId { font-size: 0.72rem; color: var(--text-2); }
+.shadeId { font-size: 0.75rem; color: var(--text-2); }
 .shadeBtn.on .shadeId { color: var(--text); font-weight: 500; }
 
 /* On the picture: a hint until the first tap, then the selected tab's name */
@@ -57,7 +57,7 @@
 .hintOff { opacity: 0; transform: translate(-50%, -6px); }
 .badge { position: absolute; left: 14px; bottom: 14px; z-index: 2; display: grid; padding: 8px 12px; border-radius: 10px; background: rgba(242,241,237,0.82); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); pointer-events: none; }
 .badgeId { font-family: var(--display); font-size: 1.3rem; line-height: 1; color: var(--text); }
-.badgeName { font-size: 0.72rem; color: var(--text-2); margin-top: 3px; text-transform: capitalize; }
+.badgeName { font-size: 0.75rem; color: var(--text-2); margin-top: 3px; text-transform: capitalize; }
 .read { display: grid; gap: 6px; padding: 18px 20px; border-radius: 10px; background: #fff; border: 1px solid var(--rule); border-left: 2px solid var(--mark-gold); }
 .readTag { font-size: 0.86rem; color: var(--text-2); }
 .readHead { font-family: var(--display); font-weight: 300; letter-spacing: -0.015em; font-size: clamp(1.7rem, 2.6vw, 2.4rem); line-height: 1.05; color: var(--text); }
@@ -80,8 +80,10 @@
 .segBtn { padding: 8px 16px; border-radius: 999px; font-size: 0.92rem; color: var(--text-2); text-transform: capitalize; transition: background 0.3s, color 0.3s; }
 .segBtn.on { background: var(--ink); color: var(--on-ink); }
 
-.range { width: 100%; appearance: none; height: 1px; background: var(--rule-strong); outline: none; margin: 12px 0 4px; }
-.range::-webkit-slider-thumb { appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--ink); border: 3px solid var(--porcelain); box-shadow: 0 0 0 1px var(--ink); cursor: ew-resize; }
+.range { width: 100%; appearance: none; -webkit-appearance: none; height: 36px; background: transparent; outline: none; margin: 0; cursor: grab; touch-action: pan-y; }
+.range::-webkit-slider-runnable-track { height: 2px; background: var(--rule-strong); border-radius: 2px; }
+.range::-moz-range-track { height: 2px; background: var(--rule-strong); border-radius: 2px; }
+.range::-webkit-slider-thumb { appearance: none; -webkit-appearance: none; margin-top: -12px; width: 26px; height: 26px; border-radius: 50%; background: var(--ink); border: 3px solid var(--porcelain); box-shadow: 0 0 0 1px var(--ink); cursor: ew-resize; }
 .range::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--ink); border: 3px solid var(--porcelain); box-shadow: 0 0 0 1px var(--ink); cursor: ew-resize; }
 
 .foot { display: grid; gap: 14px; padding-top: 6px; justify-items: start; }
@@ -101,4 +103,15 @@
   .badge { left: 10px; top: 10px; bottom: auto; padding: 6px 10px; }
   .badgeId { font-size: 1.05rem; }
   .hint { top: auto; bottom: 12px; }
+}
+
+/* Phones: ten swatches become two rows of five so each is a comfortable thumb target. */
+@media (max-width: 640px) {
+  .tones { grid-template-columns: repeat(5, 1fr); gap: 10px 12px; }
+  .tone { max-width: 52px; justify-self: center; width: 100%; }
+  .shades { gap: 4px; }
+  .shadeBtn { padding: 8px 2px; min-height: 64px; }
+  .segBtn { padding: 11px 18px; }
+  .range { height: 44px; }
+  .range::-webkit-slider-thumb { width: 30px; height: 30px; margin-top: -14px; }
 }

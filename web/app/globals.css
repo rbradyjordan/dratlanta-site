@@ -908,3 +908,51 @@ p, li, dd, .lede { text-wrap: pretty; }
    so nothing is ever clipped by the bar's rounded overflow. */
 @media (min-width: 961px) and (max-width: 1290px) { .mark-sub { display: none; } }
 @media (min-width: 961px) and (max-width: 1140px) { .hd-tel { display: none; } .hd-link { padding-inline: 13px; } }
+
+/* ---------- Phone pass (2026-10-09) ---------- */
+/* Hero portrait: the glare wrapper and the photo fill the frame by position, not by percentage height.
+   iOS Safari does not resolve height:100% inside an aspect-ratio box, which showed the top half of the
+   photograph (ceiling, then a head cut at the chin). */
+.cine-figure-glare { position: absolute !important; inset: 0; width: auto !important; height: auto !important; }
+.cine-figure-img { position: absolute; inset: 0; }
+@media (max-width: 960px) {
+  .cine-figure { aspect-ratio: 16 / 11; }
+  /* Frame: just above the cap to mid-chest, face in the upper third. */
+  .cine-figure-img { object-position: 50% 40%; transform: none; }
+  /* The fixed bar already carries Call and Book; the case strip carries "see the cases". */
+  .cine-actions { display: none; }
+  .cine { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  .cine-cases { margin-top: 2px; }
+}
+
+/* Menu: a quick cascade on transform and opacity only. Blur filters animate at a crawl on phones. */
+.menu { transition: transform 0.38s var(--ease), opacity 0.25s var(--ease), visibility 0s linear 0.38s; }
+.menu-word { display: inline-block; opacity: 0; transform: translateY(16px); transition: opacity 0.2s ease, transform 0.2s ease; }
+.menu.open .menu-word { opacity: 1; transform: none; transition: opacity 0.3s ease, transform 0.42s var(--ease); transition-delay: calc(90ms + var(--i, 0) * 38ms); }
+@media (prefers-reduced-motion: reduce) { .menu-word { opacity: 1; transform: none; transition: none; } }
+
+/* Touch targets: anything tappable is at least about 44px tall on phones, without changing how it looks. */
+@media (max-width: 960px) {
+  .mark { min-height: 44px; align-items: center; }
+  .mark-sub { align-self: center; }
+  .proof-l, .link, .nf a { padding-block: 10px; margin-block: -6px; }
+  p .link, li .link, dd .link, .small .link, .qa-a .link, .qs-a .link, .pnote .link { padding-block: 0; margin-block: 0; }
+  .aside-tel { padding-block: 6px; }
+  dd > a.link[style] { padding-block: 11px; }
+  .ftr ul { gap: 2px; }
+  .ftr ul a { display: inline-block; padding: 10px 0; }
+  .ftr address + p a, .ftr p a { display: inline-block; padding: 9px 0; }
+  .ftr-legal { gap: 4px 20px; }
+  .ftr-legal a { display: inline-block; padding: 12px 4px; }
+  .menu-more a { padding: 6px 0; }
+  .faq summary { min-height: 56px; }
+  .btn { min-height: 48px; }
+}
+
+/* Phone menu: everything fits above the fixed Call / Book bar, and scrolls if a small phone runs out of room.
+   The big "Book a consultation" row is dropped here because that bar already says it. */
+.menu { overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; gap: 28px; padding-top: calc(var(--hdr-h) + 3vh); padding-bottom: calc(84px + env(safe-area-inset-bottom)); }
+.menu nav { gap: min(3vh, 24px); }
+.menu nav a { font-size: clamp(2rem, 9.4vw, 3rem); padding-block: 2px; }
+.menu .menu-cta { display: none; }
+.menu-foot { padding-bottom: 8px; }
