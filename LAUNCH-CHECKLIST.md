@@ -51,7 +51,7 @@
 - [ ] All links live (zero `#` placeholders — a defect of the old site).
 - [ ] WCAG AA contrast pass; prefers-reduced-motion verified.
 - [ ] GA dental board advertising rules review (testimonials, financing claims).
-- [x] 301 map written for all 16 changed old URLs in `web/vercel.json` and `web/public/_redirects` (2026-10-08). After deploy, curl each old URL and confirm a single 301 to the new one, and that unknown URLs return HTTP 404 (not 200).
+- [x] 301 map written for all 16 changed old URLs in `web/vercel.json` and `web/public/_redirects` (2026-10-08). Verified on the Vercel deployment 2026-10-10: all 16 old URLs land on their new page (two hops: Vercel adds the trailing slash, then redirects, so the rules need the slashed source) and unknown URLs return 404. Re-test on www.dratlanta.org after the domain moves.
 
 ## Positioning and claims (Brady, 2026-10-07)
 - [ ] Lead with **metro Atlanta** up front; keep the Lawrenceville/Buford street address to the footer, about/contact, and schema (NAP consistency for GBP). Hero + header done; page copy and metadata with the other session.
