@@ -4,7 +4,8 @@ import { useRef } from 'react';
 import { useScrollProgress } from './useScrollProgress';
 import styles from './PinnedSteps.module.css';
 
-export type Step = { title: string; body: string; src: string; alt: string };
+/** `pos` is the photo's focal point (CSS object-position) so faces stay in frame at every crop. */
+export type Step = { title: string; body: string; src: string; alt: string; pos?: string };
 
 /**
  * Captive scroll. The frame pins for N viewports; each step the photo crosses to the
@@ -36,6 +37,7 @@ export default function PinnedSteps({ heading, steps }: { heading: string; steps
                 className={`${styles.img} ${i === active ? styles.imgOn : i < active ? styles.imgGone : ''}`}
                 loading="lazy"
                 decoding="async"
+                style={s.pos ? { objectPosition: s.pos } : undefined}
               />
             ))}
             <span className={styles.count} aria-hidden="true">{String(active + 1).padStart(2, '0')} / {String(n).padStart(2, '0')}</span>

@@ -178,3 +178,9 @@ Brady rejected the reel-in-letters intro ("completely different approach… load
 - PaymentSlider on narrow containers: larger, lower blobs so the color reaches the button; verified dragging on iOS.
 - **Testing on a real iPhone engine:** `mcp__Claude_Code_iOS_Simulator__control` with `open_url http://localhost:3000/...`, wait about 10s (dev mode hydrates slowly), then `screenshot` / `tap` / `swipe` in device points (440x956 on the 17 Pro Max; displayed-image px x 0.478). Wait 1-2s after a tap before the screenshot. This catches Safari-only layout bugs that Chrome emulation misses.
 - Lighthouse mobile after this pass (gzip server, applied throttling): home 89 (LCP 2.1s), veneers 99, pricing 99.
+
+## Dr. Ennuson's phone notes (2026-10-10)
+- **Step 02 photo changed** at his request: `consult-whitecoat.webp` (cropped to a headless torso on phones) replaced in the home pinned steps by `plan-laptop.webp` (shoot frame 7N2A1672: white coat, at a laptop with his assistant). The old photo is still used on /veneers "Smile planning", where its crop shows his face.
+- **Pinned step photos were cutting heads off on phones.** `Step` now takes `pos` (object-position focal point) and the phone frame is 5/4 instead of 16/10. Focal points: consult-screen 12%, plan-laptop 34%, loupes-side 46%, chairside 42%. Any new step photo needs a `pos`.
+- **Statement bands (`.bleed`) on phones** no longer lay type over a cropped photo. At <=960px the photo is shown whole at its own shape (`--ar` on `.bleed-media`, default 3/2; why-licensed sets 4/5 for its portrait) with the statement beneath on ink. Desktop is unchanged.
+- Simulator gotcha: `open_url` to the same URL does not reload the page. Add a throwaway query (`?v=2`) to force a fresh load.

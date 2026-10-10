@@ -48,7 +48,8 @@
 @media (max-width: 960px) {
   .inner { grid-template-columns: 1fr; align-content: center; row-gap: 20px; }
   .flip .media, .flip .copy { transform: none; }
-  .media { aspect-ratio: 16 / 10; max-height: 36svh; }
+  /* Taller frame on phones: the photos are portraits, and a wide letterbox cut heads off. */
+  .media { aspect-ratio: 5 / 4; max-height: 40svh; width: 100%; }
   .heading { font-size: clamp(1.6rem, 6vw, 2.2rem); }
   .step { padding: 12px 0; }
   .done, .next { display: none; }

@@ -103,7 +103,7 @@ export default function WhyLicensed() {
       </section>
 
       <section className="bleed">
-        <div className="bleed-media" aria-hidden="true">
+        <div className="bleed-media" aria-hidden="true" style={{ ['--ar' as string]: '4 / 5' }}>
           <img src="/photos/chairside.webp" alt="" width={1024} height={1535} loading="lazy" decoding="async" style={{ objectPosition: '50% 30%' }} />
         </div>
         <div className="wrap grid" style={{ padding: 'var(--rhythm-s) 0' }}>

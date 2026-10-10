@@ -26,22 +26,22 @@ const steps = [
   {
     title: 'Talk first',
     body: 'Sixty minutes. What you want changed, what worries you, what your timeline and budget look like. No chair yet, no instruments, and an honest answer if veneers are not right for you.',
-    src: '/photos/consult-screen.webp', alt: 'Dr. Ennuson reviewing images on screen with a patient at a veneer consultation',
+    src: '/photos/consult-screen.webp', alt: 'Dr. Ennuson reviewing images on screen with a patient at a veneer consultation', pos: '50% 12%',
   },
   {
     title: 'Photographs and a plan',
     body: 'Calibrated photography, facial analysis, a gum health check. Shade is chosen against your skin in daylight. You leave with the full price in writing.',
-    src: '/photos/consult-whitecoat.webp', alt: 'Dr. Eric Ennuson, DDS, in a white coat during smile planning',
+    src: '/photos/plan-laptop.webp', alt: 'Dr. Eric Ennuson, DDS, in a white coat planning a case at a laptop with his assistant', pos: '50% 34%',
   },
   {
     title: 'Try the smile before it exists',
     body: 'A wax-up you can hold, then trial temporaries shaped like the final design that you wear in real life. The design changes until you approve it.',
-    src: '/photos/loupes-side.webp', alt: 'Dr. Ennuson wearing magnification loupes during veneer preparation',
+    src: '/photos/loupes-side.webp', alt: 'Dr. Ennuson wearing magnification loupes during veneer preparation', pos: '50% 46%',
   },
   {
     title: 'Porcelain, placed',
     body: 'Lab-made porcelain bonded by a licensed dentist, the bite refined, and a written care plan for the next ten to fifteen years.',
-    src: '/photos/chairside.webp', alt: 'Dr. Ennuson placing porcelain veneers chairside',
+    src: '/photos/chairside.webp', alt: 'Dr. Ennuson placing porcelain veneers chairside', pos: '50% 42%',
   },
 ];
 

@@ -956,3 +956,13 @@ p, li, dd, .lede { text-wrap: pretty; }
 .menu nav a { font-size: clamp(2rem, 9.4vw, 3rem); padding-block: 2px; }
 .menu .menu-cta { display: none; }
 .menu-foot { padding-bottom: 8px; }
+
+/* ---------- Dr. Ennuson's phone notes (2026-10-10) ----------
+   Statement bands on phones: the photograph is shown whole, at its own shape, with the words beneath it on ink.
+   Laying type over a landscape photo forced into a tall frame cropped people at the sides. */
+@media (max-width: 960px) {
+  .bleed, .bleed.bleed-low { display: block; min-height: 0; background: var(--ink); }
+  .bleed-media { position: relative; inset: auto; z-index: 0; aspect-ratio: var(--ar, 3 / 2); max-height: 74svh; }
+  .bleed-media::after, .bleed-low .bleed-media::after { background: linear-gradient(to top, var(--ink) 0%, rgba(22,24,27,0.25) 12%, rgba(22,24,27,0) 28%); }
+  .bleed > .wrap { padding: 14px 0 clamp(48px, 12vw, 72px) !important; }
+}
