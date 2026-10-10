@@ -2,8 +2,18 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/about-dr-atlanta/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
       "source": "/about-dr-atlanta",
       "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/smile-makeover/",
+      "destination": "/veneers/",
       "permanent": true
     },
     {
@@ -12,7 +22,17 @@
       "permanent": true
     },
     {
+      "source": "/before-after-gallery/",
+      "destination": "/results/",
+      "permanent": true
+    },
+    {
       "source": "/before-after-gallery",
+      "destination": "/results/",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials/",
       "destination": "/results/",
       "permanent": true
     },
@@ -22,7 +42,17 @@
       "permanent": true
     },
     {
+      "source": "/pricing-financing/",
+      "destination": "/pricing/",
+      "permanent": true
+    },
+    {
       "source": "/pricing-financing",
+      "destination": "/pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/veneers-cost/",
       "destination": "/pricing/",
       "permanent": true
     },
@@ -32,8 +62,18 @@
       "permanent": true
     },
     {
+      "source": "/affordable-veneers/",
+      "destination": "/pricing/",
+      "permanent": true
+    },
+    {
       "source": "/affordable-veneers",
       "destination": "/pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/veneer-education/",
+      "destination": "/veneers/",
       "permanent": true
     },
     {
@@ -42,7 +82,17 @@
       "permanent": true
     },
     {
+      "source": "/schedule-consultation/",
+      "destination": "/consultation/",
+      "permanent": true
+    },
+    {
       "source": "/schedule-consultation",
+      "destination": "/consultation/",
+      "permanent": true
+    },
+    {
+      "source": "/get-veneer-quote/",
       "destination": "/consultation/",
       "permanent": true
     },
@@ -52,7 +102,17 @@
       "permanent": true
     },
     {
+      "source": "/get-smile-quote/",
+      "destination": "/consultation/",
+      "permanent": true
+    },
+    {
       "source": "/get-smile-quote",
+      "destination": "/consultation/",
+      "permanent": true
+    },
+    {
+      "source": "/virtual-consultation/",
       "destination": "/consultation/",
       "permanent": true
     },
@@ -62,7 +122,17 @@
       "permanent": true
     },
     {
+      "source": "/mentorship/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
       "source": "/mentorship",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you-mentorship/",
       "destination": "/about/",
       "permanent": true
     },
@@ -72,8 +142,18 @@
       "permanent": true
     },
     {
+      "source": "/blog/",
+      "destination": "/veneers/",
+      "permanent": true
+    },
+    {
       "source": "/blog",
       "destination": "/veneers/",
+      "permanent": true
+    },
+    {
+      "source": "/smile-design-studio/",
+      "destination": "/smile-design/",
       "permanent": true
     },
     {
